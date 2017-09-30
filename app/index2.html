@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Decentralized Land Registration</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <h1>Decentralized Land Registration</h1>
+  <br>
+  <h1>Register Account</h1>
+  <br><label for="aadhar_id">Aadhar id:</label><input type="text" id="aadhar_id" placeholder="e.g. 747498000189"></input>
+  <br><label for="address">Eth address</label><input type="text" id="address" placeholder="e.g. 0xa649a977b362418bec0e350f6ad9af5dcffc93a2"></input>
+  <br><label for="name">Name:</label><input type="text" id="name" placeholder="e.g. Samantha"></input>  
+  <br><br><button id="create_account" onclick="App.create_account(document.getElementById('aadhar_id').value, document.getElementById('address').value, document.getElementById('name').value)">Create account</button>
+  
+  
+  <br><br><button id="get_persons_length" onclick="App.fetch_persons()">Get persons length</button>  
+  
+  <br><br>
+  <br>
+</body>
+</html>

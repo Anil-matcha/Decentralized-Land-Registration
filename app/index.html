@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Decentralized Land Registration</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <h1>Decentralized Land Registration</h1>
+  <br>
+  
+  <div id="register_account">
+	<h1>Register User Account (Only by govt)</h1>
+	<br><label for="aadhar_id">Aadhar id:</label><input type="text" id="aadhar_id" placeholder="e.g. 747498000189"></input>
+	<br><label for="address">Eth address</label><input type="text" id="address" placeholder="e.g. 0xa649a977b362418bec0e350f6ad9af5dcffc93a2"></input>
+	<br><label for="name">Name:</label><input type="text" id="name" placeholder="e.g. Samantha"></input>  
+	<br><br><button id="create_account" onclick="App.create_account(document.getElementById('aadhar_id').value, document.getElementById('address').value, document.getElementById('name').value)">Create account</button>
+	<br><br>  
+  </div>  
+  
+  <div id="register_land">
+	<h1>Register Land (Only by govt)</h1>
+	<br><label for="aadhar_id">Aadhar id:</label><input type="text" id="aadhar_id" placeholder="e.g. 747498000189"></input>
+	<br><label for="address">Address:</label><input type="text" id="address" placeholder="e.g. Flat no:- 203, Koramangala phase 6, Bangalore"></input>
+	<br><label for="land_id">Land id:</label><input type="text" id="land_id" placeholder="e.g. 123456789"></input>  
+	<br><label for="price">Price in eth:</label><input type="text" id="price" placeholder="e.g. 100"></input>    
+	<br><br><button id="register" onclick="App.register_land(document.getElementById('aadhar_id').value, document.getElementById('address').value, document.getElementById('land_id').value, document.getElementById('price').value)">Register Land</button>
+	<br><br>
+	<br>
+  </div>
+  
+  <div id="buy_land">
+	<h1>Buy Land</h1>
+	<br><label for="aadhar_id">Aadhar id:</label><input type="text" id="aadhar_id" placeholder="e.g. 747498000189"></input>
+	<br><label for="land_id">Land id:</label><input type="text" id="land_id" placeholder="e.g. 123456789"></input>  
+	<br><label for="price">Price in eth:</label><input type="text" id="price" placeholder="e.g. 100"></input>    
+	<br><br><button id="buy_land" onclick="App.pay_for_land(document.getElementById('aadhar_id').value, document.getElementById('land_id').value, document.getElementById('price').value)">Pay for Land</button>
+	<br><br>
+	<br>
+  </div>  
+
+  <div id="buy_requests">
+	<h1>Get buy requests for my land</h1>
+	<br><label for="aadhar_id">Aadhar id:</label><input type="text" id="aadhar_id" placeholder="e.g. 747498000189"></input>	
+    <br><br><button id="get_requests" onclick="App.fetch_requests(document.getElementById('aadhar_id').value)">Get Requests</button>  	
+	<br><br>
+	<br>
+  </div>  
+
+  <div id="acc_rej_land">
+	<h1>Accept/Reject request</h1>
+	<br><label for="payment_id">Payment id:</label><input type="text" id="payment_id" placeholder="e.g. 747498000189"></input>	
+    <br><br><button id="accept_request" onclick="App.accept_request(document.getElementById('payment_id').value)">Accept request</button><button id="reject_request" onclick="App.reject_request(document.getElementById('payment_id').value)">Reject request</button>  	  	
+	<br><br>
+	<br>
+  </div>    
+  
+</body>
+</html>
